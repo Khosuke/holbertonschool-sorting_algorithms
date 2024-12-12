@@ -17,7 +17,7 @@ void _swap(int *a, int *b)
 
 	*a = *b;
 
-	*b = temp;	
+	*b = temp;
 }
 
 /**
@@ -33,9 +33,14 @@ void bubble_sort(int *array, size_t size)
 	size_t j = 0;
 	size_t i = 0;
 
+	if (array == NULL || size < 2)
+	{
+		return;
+	}
+
 		while (j < size - 1)
 		{
-			i = 0;	
+			i = 0;
 			while (i < size - j)
 			{
 				if (array[i] > array[i + 1])
