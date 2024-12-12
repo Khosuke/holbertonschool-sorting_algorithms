@@ -24,4 +24,8 @@ void bubble_sort(int *array, size_t size);
 
 void _swap(int *a, int *b);
 
+void selection_sort(int *array, size_t size);
+
+void _swap_(int *a, int *b);
+
 #endif
