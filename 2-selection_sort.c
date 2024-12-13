@@ -27,24 +27,27 @@ void _swap_(int *a, int *b)
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j;
+	size_t i, j, min;
 
 	i = 0;
 	if (array == NULL || size < 2)
 		return;
 
-	while (i < size)
+	while (i < size - 1)
 	{
-		j = 0;
+		min = i;
+		j = i + 1;
 		while (j < size)
 		{
-			if (array[i] < array[j])
+			if (array[min] > array[j])
 			{
-				_swap_(&array[i], &array[j]);
-				print_array(array, size);
+				min = j;
 			}
 			j++;
 		}
+		_swap_(&array[i], &array[min]);
+		if (i != min)
+			print_array(array, size);
 		i++;
 	}
 }
