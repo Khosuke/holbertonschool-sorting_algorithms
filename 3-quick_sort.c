@@ -25,7 +25,7 @@ void _swap_(int *a, int *b)
  * @low: the start of the array
  * @high: the end of the array
  * @size: size of the array
- * 
+ *
  * Return: the pivot index
  */
 int partition(int *array, int low, int high, size_t size)
@@ -56,15 +56,15 @@ int partition(int *array, int low, int high, size_t size)
  * @low: the start of the array
  * @high: the end of the array
  * @size: size of the array
- * 
+ *
  * Return: no return
  */
 void recursive_quicksort(int *array, int low, int high, size_t size)
 {
 	size_t split;
+
 	if (low >= high || low < 0)
 		return;
-	
 	split = partition(array, low, high, size);
 	if (split > 0)
 	{
@@ -79,12 +79,11 @@ void recursive_quicksort(int *array, int low, int high, size_t size)
  * order using the Quick sort algorithm
  * @array: the array to sort
  * @size: size of the array
- * 
+ *
  * Return: no return
  */
 void quick_sort(int *array, size_t size)
 {
-
 	if (array == NULL || size < 2)
 		return;
 
